@@ -8,13 +8,27 @@ function questao1() {
         cadastro.push({
             nome: prompt("nome: "),
             idade: parseInt(prompt("idade: ")),
-            escolaridade: prompt("escolaridade: ")
+            curso: prompt("curso: ")
         });
         loop = parseInt(prompt("[1] CONTINUAR [2] PARAR"));
 
     } while (loop != 2);
     
     console.log(cadastro);
+
+    // let list =  cadastro.map(item=> item.nome)
+
+    list = [];
+
+    console.log(cadastro.length);
+    for (let i = cadastro.length - 1; i >= 0; i--) {
+        console.log(i); 
+        list.push(cadastro[i].nome); 
+    }
+    console.log(list);
+
+    alert(`Há ${cadastro.length} alunos cadastrados. Nome dos alunos: ${list.join(", ")}`);
+    console.log(cadastro.length);
 }
 
 /* 2. Crie uma array de planetas que inclua "Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"  e, em seguida, peça ao usuário para digitar o nome de um planeta. 
@@ -48,11 +62,9 @@ Quando o array não possuir mais itens dentro de si, escreva "Lista de compras f
  */
 
 let frutas = ["manga", "maçã", "pera", "uva", "morango"];
-// let tamanho = frutas.length;
-// console.log(tamanho);
 
 function questao3() {
-    // while (frutas.length < 1) { /* length - quantidade de itens dentro do array */
+    while (frutas.length - 1 >= 0) { /* length - quantidade de itens dentro do array */
         let novaFruta = prompt(`Frutas na lista: ${frutas.join(", ")}. Qual deseja?`);
 
         if (frutas.includes(novaFruta)) {
@@ -66,5 +78,5 @@ function questao3() {
         } else {
             alert(`A fruta ${novaFruta} não está disponível!`);
         }
-    // } 
+    } 
 }
