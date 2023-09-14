@@ -1,4 +1,4 @@
-/* 1. Crie um programa onde o usuário possa cadastrar estudantes sem limites, e, em seguida, Se o usuário digitar "PARE" o programa deve exibir a quantidade de estudantes cadastrados e a lista com cada um deles.  */
+/* 1. Crie um programa onde o usuário possa cadastrar estudantes sem limites, e em seguida, Se o usuário digitar "PARE" o programa deve exibir a quantidade de estudantes cadastrados e a lista com cada um deles.  */
 
 let cadastro = [];
 let loop = 0;
@@ -68,7 +68,7 @@ function questao3() {
         let novaFruta = prompt(`Frutas na lista: ${frutas.join(", ")}. Qual deseja?`);
 
         if (frutas.includes(novaFruta)) {
-            let continuar = prompt(`A fruta ${novaFruta} está disponível! Deseja comprar? (S/N)`);
+            let continuar = prompt(`A fruta ${novaFruta} está disponível! Deseja adicionar ao carrinho? (S/N)`);
             if (continuar == "S" || continuar == "s") {
                 let remover = frutas.indexOf(novaFruta);
                 console.log(continuar);
@@ -79,4 +79,5 @@ function questao3() {
             alert(`A fruta ${novaFruta} não está disponível!`);
         }
     } 
+    confirm("Lista de compras finalizada! Aperte em OK para efetuar o pagamento.");
 }
